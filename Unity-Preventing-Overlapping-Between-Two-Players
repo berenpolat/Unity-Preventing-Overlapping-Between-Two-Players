@@ -1,0 +1,19 @@
+Vector3 focalPOne = focalPointOfCharacterOne();
+Vector3 focalPTwo = focalPointOfCharacterTwo();
+
+float dx = focalPOne.x - focalPTwo.x;
+float dy = focalPOne.y - focalPTwo.y;
+float dz = focalPOne.z - focalPTwo.z;
+
+// calc distance along z plane
+if (Math.Sqrt((dx * dx) + (dy * dy)) < minDistance)
+{
+    // person is too close to the others head.
+    if (Math.abs(dz) < minHeightAbove)
+    {
+        // go to previous position.
+    }
+
+    // if there is no vertical elivation, you can go
+    // straight to moving them back to previous position
+}
